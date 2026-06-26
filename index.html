@@ -2,44 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CRM Dashboard Slides</title>
+  <title>CRM Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>CRM / Client Management Dashboard</h1>
 
-  <!-- Slide Container -->
-  <div class="slide-container">
-    <div class="slide active" id="slide1">
-      <h2>Client List</h2>
-      <ul>
-        <li>Client A - Status: Active</li>
-        <li>Client B - Status: Pending</li>
-      </ul>
-    </div>
+  <!-- Client List -->
+  <section id="clients">
+    <h2>Client List</h2>
+    <ul id="clientList"></ul>
+    <input type="text" id="newClient" placeholder="Add new client">
+    <button onclick="addClient()">Add Client</button>
+  </section>
 
-    <div class="slide" id="slide2">
-      <h2>Lead Pipeline</h2>
+  <!-- Lead Pipeline -->
+  <section id="pipeline">
+    <h2>Lead Pipeline</h2>
+    <div id="pipelineStages">
       <div class="stage">🔵 New Lead</div>
       <div class="stage">🟢 Contacted</div>
       <div class="stage">🟡 Proposal Sent</div>
       <div class="stage">🔴 Closed</div>
     </div>
+  </section>
 
-    <div class="slide" id="slide3">
-      <h2>Tasks & Reminders</h2>
-      <ul>
-        <li>Follow up with Client A</li>
-        <li>Prepare proposal for Client B</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Navigation Buttons -->
-  <div class="nav-buttons">
-    <button onclick="prevSlide()">Previous</button>
-    <button onclick="nextSlide()">Next</button>
-  </div>
+  <!-- Tasks -->
+  <section id="tasks">
+    <h2>Tasks & Reminders</h2>
+    <ul id="taskList"></ul>
+    <input type="text" id="newTask" placeholder="Add new task">
+    <button onclick="addTask()">Add Task</button>
+  </section>
 
   <script src="script.js"></script>
 </body>
