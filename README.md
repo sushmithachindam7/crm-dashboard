@@ -14,9 +14,6 @@ This project demonstrates a basic dashboard layout for small agencies or B2B ser
 - CSS for styling  
 - JavaScript for simple interactivity  
 
- 
 
 ## 🔗 Live Demo
-[View Here](https://sushmithachindam7.github.io/crm-dashboard/)
-
-
+https://sushmithachindam7.github.io/crm-dashboard/
