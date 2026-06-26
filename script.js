@@ -1,30 +1,27 @@
-// Show alert when page loads
-window.onload = () => {
-  alert("CRM Dashboard Loaded!");
-};
+let currentSlide = 1;
+const totalSlides = 3;
 
-// Add new client
-function addClient() {
-  const clientInput = document.getElementById("newClient");
-  const clientList = document.getElementById("clientList");
-
-  if (clientInput.value.trim() !== "") {
-    const li = document.createElement("li");
-    li.textContent = clientInput.value + " - Status: New";
-    clientList.appendChild(li);
-    clientInput.value = "";
-  }
+function showSlide(n) {
+  const slides = document.querySelectorAll(".slide");
+  slides.forEach((slide, index) => {
+    slide.classList.remove("active");
+    if (index === n - 1) {
+      slide.classList.add("active");
+    }
+  });
 }
 
-// Add new task
-function addTask() {
-  const taskInput = document.getElementById("newTask");
-  const taskList = document.getElementById("taskList");
-
-  if (taskInput.value.trim() !== "") {
-    const li = document.createElement("li");
-    li.textContent = taskInput.value;
-    taskList.appendChild(li);
-    taskInput.value = "";
-  }
+function nextSlide() {
+  currentSlide++;
+  if (currentSlide > totalSlides) currentSlide = 1;
+  showSlide(currentSlide);
 }
+
+function prevSlide() {
+  currentSlide--;
+  if (currentSlide < 1) currentSlide = totalSlides;
+  showSlide(currentSlide);
+}
+
+// Initialize first slide
+showSlide(currentSlide);
