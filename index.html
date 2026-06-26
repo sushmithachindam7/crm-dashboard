@@ -8,28 +8,38 @@
 <body>
   <h1>CRM / Client Management Dashboard</h1>
 
+  <!-- Client List -->
   <section id="clients">
     <h2>Client List</h2>
-    <ul>
+    <ul id="clientList">
+      <!-- Example entries -->
       <li>Client A - Status: Active</li>
       <li>Client B - Status: Pending</li>
     </ul>
+    <input type="text" id="newClient" placeholder="Add new client">
+    <button onclick="addClient()">Add Client</button>
   </section>
 
+  <!-- Lead Pipeline -->
   <section id="pipeline">
     <h2>Lead Pipeline</h2>
-    <div class="stage">🔵 New Lead</div>
-    <div class="stage">🟢 Contacted</div>
-    <div class="stage">🟡 Proposal Sent</div>
-    <div class="stage">🔴 Closed</div>
+    <div id="pipelineStages">
+      <div class="stage">🔵 New Lead</div>
+      <div class="stage">🟢 Contacted</div>
+      <div class="stage">🟡 Proposal Sent</div>
+      <div class="stage">🔴 Closed</div>
+    </div>
   </section>
 
+  <!-- Tasks -->
   <section id="tasks">
     <h2>Tasks & Reminders</h2>
-    <ul>
+    <ul id="taskList">
       <li>Follow up with Client A</li>
       <li>Prepare proposal for Client B</li>
     </ul>
+    <input type="text" id="newTask" placeholder="Add new task">
+    <button onclick="addTask()">Add Task</button>
   </section>
 
   <script src="script.js"></script>
