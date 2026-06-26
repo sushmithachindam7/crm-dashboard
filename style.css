@@ -21,3 +21,23 @@ section {
   background: #eee;
   border-radius: 5px;
 }
+button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: #0056b3;
+}
+input {
+  padding: 8px;
+  margin-top: 10px;
+  width: 60%;
+}
+li {
+  margin: 5px 0;
+}
